@@ -6,27 +6,24 @@
     overflow-x: hidden;
     box-sizing: border-box;
 }
+
 body{
     min-height: 100%;
     width: 100%;
-    position: absolute;
+
 }
 
 header{
     background-color: aqua;
     border: 3px solid;
     width: 100%;
-    position: fixed;
+    position: sticky;
 }
 a{
     text-decoration: none;
     color: black;
 }
 
-li{
-    display: inline-block;
-    margin: 0% 30px;
-}
 
 /*NAV BAR*/
 .nav-bar{
@@ -40,9 +37,34 @@ li{
     display:inline-block;
     width: 60%;
 }
+
+.nav-menu li{
+        display: inline-block;
+        margin: 0% 30px;
+}
+
 .logo{
     height: 80px;
 }
 .login{
     height: 60px;
+}
+
+/*MAIN*/
+
+
+
+
+/*Footer*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width:100% ;
+    margin-top: 70%; 
+    border: 1px solid;
+}
+
+.references{
+    width: 50%;
 }
