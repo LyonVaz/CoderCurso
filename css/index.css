@@ -1,41 +1,48 @@
+/*Genericos*/
 
-* {
+*{
     margin: 0;
-    padding:0;
-    font-family: 'Montserrat', 'Calibri';
+    padding: 0;
+    overflow-x: hidden;
     box-sizing: border-box;
 }
-body {
-    display: flex;
-    flex-direction: column;
+body{
     min-height: 100%;
-    overflow-x: hidden;
+    width: 100%;
+    position: absolute;
 }
 
-li{
-    list-style:none;
-    display: inline-block;
+header{
+    background-color: aqua;
+    border: 3px solid;
+    width: 100%;
+    position: fixed;
 }
 a{
     text-decoration: none;
     color: black;
 }
 
-.nav-bar{
-    background-color: #ea9a9a;
-    display: flex;
-    width: 100%;
+li{
+    display: inline-block;
+    margin: 0% 30px;
 }
 
-.main{
+/*NAV BAR*/
+.nav-bar{
     display: flex;
-    flex-wrap:nowrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.public-decks{
-    background-color: crimson;
+
+.nav-menu{
+    border: 1px solid;
+    display:inline-block;
+    width: 60%;
 }
-.news{
-    background-color: rgb(1, 1, 220);
-    color: white;
-    width: 40%;
+.logo{
+    height: 80px;
+}
+.login{
+    height: 60px;
 }
