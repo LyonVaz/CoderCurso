@@ -1,80 +1,88 @@
 /*Genericos*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
     overflow: hidden;
 }
 
-body{
+body {
     max-width: 1400px;
 }
 
-#header{
+#header {
     background-color: aqua;
     border: 3px solid;
     width: 100%;
     height: 90px;
     position: fixed;
+    z-index: 5;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
 
 
 /*NAV BAR*/
-.header-nav-bar{
+.header-nav-bar {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
 }
 
-.header-nav-bar img{
+.header-nav-bar img {
     width: 80px;
 }
-.header-nav-menu{
+
+.header-nav-menu {
     display: flex;
     column-gap: 40px;
 }
 
-.header-nav-menu li{
-        display: inline-block;
+.header-nav-menu li {
+    display: inline-block;
 }
 
 
 
 /*MAIN*/
 
-#main{
+#main {
     padding-top: 20px;
     width: 100%;
     margin-top: 90px;
     min-height: 100vh;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 10px;
 }
 
-.main_noticias{
+.main_noticias {
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main_noticias h2{
+.main_noticias h2 {
     font-size: medium;
 }
 
-.main_noticias_article{
+.main_noticias_article {
     padding: 10px;
     border: 3px inset #1C6EA4;
     border-radius: 18px;
@@ -87,7 +95,8 @@ a{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.main_public_decks{
+
+.main_public_decks {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -96,40 +105,40 @@ a{
 
 }
 
-.main_public_decks_deck{
+.main_public_decks_deck {
     width: 200px;
     height: 250px;
     margin: 5px;
     padding: 10px;
 }
 
-.card{
+.card {
     z-index: -1;
 }
 
 /*Footer*/
 
-#footer{
+#footer {
     background-color: aqua;
     display: flex;
     justify-content: space-between;
-    width:100% ;
+    width: 100%;
     align-items: center;
     position: absolute;
 }
 
-#footer img{
+#footer img {
     width: 120px;
 }
 
-.footer__links-copyright{
+.footer__links-copyright {
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.footer-social-medias{
+.footer-social-medias {
     width: 5%;
     display: flex;
     gap: 20px;
@@ -137,27 +146,111 @@ a{
     justify-content: space-around;
 }
 
+/*MAIN Builder*/
+.main_card_selector {
+    background-color: aqua;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
 
+.main_card_selector_filter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_card_selector_area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.main_card_selector_card_article {
+    margin: 5px;
+    height: 150px;
+    width: 110px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_card_selector_card_article img {
+    height: 100%;
+    width: 100%;
+}
+
+.main_deck {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.main_deck_area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main_deck_area img {
+    height: 100%;
+    width: 100%;
+}
+
+.main_card_selector_card_article_add {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre los botones */
+}
+
+.main_card_selector_card_article:hover .main_card_selector_card_article_add {
+    opacity: 1;
+    top: 120px;
+    transition: opacity 0.3s ease;
+}
 
 /*Media query*/
 
 @media (max-width: 700px) {
-    #main{
+    #main {
         flex-direction: column;
     }
-    .decks,.main_noticias,.main_public_decks{
+
+    .decks,
+    .main_noticias,
+    .main_public_decks,
+    .main_deck,.main_card_selector  {
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
-    #footer{
+
+    #footer {
         flex-direction: column;
     }
-    .footer__links-copyright{
+
+    .footer__links-copyright {
         width: 100%;
     }
-    .footer-social-medias{
+
+    .footer-social-medias {
         width: 100%;
         flex-direction: row;
     }
-  }
+}
